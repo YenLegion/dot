@@ -90,8 +90,7 @@ setopt autocd autopushd cdsilent chaselinks pushdignoredups pushdminus pushdsile
 #setopt hist_verify              # Do Not Execute Immediately Upon History Expansion.
 #setopt extended_history         # Show Timestamp In History.
 
-
-
+zstyle ':autocomplete:tab:*' widget-style menu-select
 
 # Environment variables
 export LANG='en_US.UTF-8'
@@ -148,6 +147,8 @@ znap source marlonrichert/zsh-edit
 znap source marlonrichert/zcolors
 znap eval zcolors "zcolors ${(q)LS_COLORS}"
 
+
+eval "$(zoxide init zsh)"
 #znap eval trapd00r/LS_COLORS 'dircolors -b LS_COLORS'
 # zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 
