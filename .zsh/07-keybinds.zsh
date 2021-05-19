@@ -92,3 +92,27 @@ bindkey "^[m" copy-prev-shell-word
 ## Fix weird sequence that rxvt produces
 #bindkey -s '^[[Z' '\t'
 #
+# Make Control-U do the same as in Bash/Readline.
+# Zsh's default kills the whole line.
+bindkey '^U' backward-kill-line
+
+# Add same Redo keybinding as in Prezto/Emacs-undo-tree.
+# Zsh does not have a default keybinding for this.
+bindkey '^[_' redo
+
+# Replace some default widgets with better ones.
+# zle -A copy-prev-{shell-,}word
+# zle -A push-line{-or-edit,}
+# zle -A {vi-,}quoted-insert
+
+# `zsh-edit` adds `bindkey -c`, which lets you bind arbitrary commands.
+# $key table is defined by /etc/zshrc & `zsh-autocomplete`.
+
+# Alt-H: Open `man` page of current command.
+unalias run-help
+autoload -Uz  run-help{,-{git,ip,openssl,p4,sudo,svk,svn}}
+
+# Alt-Shift-/: Show definition of current command.
+autoload -Uz which-command
+zle -N which-command
+unalias which-command 2>/dev/null

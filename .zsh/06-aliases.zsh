@@ -1,4 +1,4 @@
-#!/bin/zsh
+## Custom Aliases
   alias cd..="cd .."
   alias l="exa -a"
   alias ls="exa -la"
