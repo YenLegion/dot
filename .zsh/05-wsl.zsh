@@ -10,4 +10,7 @@ if [ "$WSL_DISTRO_NAME" = "ArchWSL" ]; then
 	export path=('/home/yen/.gem/ruby/3.0.0' '$HOME/.local/bin' '/mnt/c/Program Files/Microsoft VS Code/bin' $path)
 ## fpath
 	fpath=( /home/yen/.config/zsh/completions /home/yen/.config/zsh/zsh-completions/src /home/yen/.config/zsh/zsh-more-completions/src $fpath)
+## WSL Specific Aliases	
+	alias wsl=/mnt/c/Windows/System32/wsl.exe
+	alias explorer=/mnt/c/Windows/explorer.exe
 fi

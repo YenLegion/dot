@@ -1,0 +1,259 @@
+## From dotfile example
+
+# autoload -U colors && colors    # Load Colors.
+# unsetopt case_glob              # Use Case-Insensitve Globbing.
+# setopt globdots                 # Glob Dotfiles As Well.
+# setopt extendedglob             # Use Extended Globbing.
+# setopt autocd                   # Automatically Change Directory If A Directory Is Entered.
+# 
+# # Smart URLs.
+# autoload -Uz url-quote-magic
+# zle -N self-insert url-quote-magic
+# 
+# # General.
+# setopt brace_ccl                # Allow Brace Character Class List Expansion.
+# setopt combining_chars          # Combine Zero-Length Punctuation Characters ( Accents ) With The Base Character.
+# setopt rc_quotes                # Allow 'Henry''s Garage' instead of 'Henry'\''s Garage'.
+# unsetopt mail_warning           # Don't Print A Warning Message If A Mail File Has Been Accessed.
+# 
+# # Jobs.
+# setopt long_list_jobs           # List Jobs In The Long Format By Default.
+# setopt auto_resume              # Attempt To Resume Existing Job Before Creating A New Process.
+# setopt notify                   # Report Status Of Background Jobs Immediately.
+# unsetopt bg_nice                # Don't Run All Background Jobs At A Lower Priority.
+# unsetopt hup                    # Don't Kill Jobs On Shell Exit.
+# unsetopt check_jobs             # Don't Report On Jobs When Shell Exit.
+
+# setopt correct                  # Turn On Corrections
+
+# History.
+HISTFILE="${ZDOTDIR:-$HOME}/.zsh_history"
+HISTSIZE=100000
+SAVEHIST=5000
+ # setopt appendhistory notify
+ # unsetopt beep nomatch
+ # 
+ # setopt bang_hist                # Treat The '!' Character Specially During Expansion.
+ # setopt inc_append_history       # Write To The History File Immediately, Not When The Shell Exits.
+ # setopt share_history            # Share History Between All Sessions.
+ # setopt hist_expire_dups_first   # Expire A Duplicate Event First When Trimming History.
+ # setopt hist_ignore_dups         # Do Not Record An Event That Was Just Recorded Again.
+ # setopt hist_ignore_all_dups     # Delete An Old Recorded Event If A New Event Is A Duplicate.
+ # setopt hist_find_no_dups        # Do Not Display A Previously Found Event.
+ # setopt hist_ignore_space        # Do Not Record An Event Starting With A Space.
+ # setopt hist_save_no_dups        # Do Not Write A Duplicate Event To The History File.
+ # setopt hist_verify              # Do Not Execute Immediately Upon History Expansion.
+ # setopt extended_history         # Show Timestamp In History.
+
+
+
+
+
+
+
+
+
+
+
+
+# Defaults, added (already enabled) for complete-ness.
+
+# setopt autopushd
+# setopt autoresume
+# setopt nobgnice
+# setopt nocheckjobs
+# setopt combiningchars
+# setopt extendedhistory
+# setopt histexpiredupsfirst
+# setopt histfindnodups
+# setopt histignorealldups
+# setopt histignoredups
+# setopt histignorespace
+# setopt histsavenodups
+# setopt histverify
+# setopt nohup
+# setopt interactive
+# setopt interactivecomments
+# setopt login
+# setopt longlistjobs
+# setopt monitor
+# setopt promptsubst
+# setopt pushdminus
+# setopt rcquotes
+# setopt sharehistory
+# setopt shinstdin
+# setopt zle
+
+
+# Zstyle. from zinit
+#  zstyle ':completion:*:*:*:*:*' menu select
+#  zstyle ':completion:*:matches' group 'yes'
+#  zstyle ':completion:*:options' description 'yes'
+#  zstyle ':completion:*:options' auto-description '%d'
+#  zstyle ':completion:*:corrections' format ' %F{green}-- %d (errors: %e) --%f'
+#  zstyle ':completion:*:descriptions' format ' %F{yellow}-- %d --%f'
+#  zstyle ':completion:*:messages' format ' %F{purple} -- %d --%f'
+#  zstyle ':completion:*:warnings' format ' %F{red}-- no matches found --%f'
+#  zstyle ':completion:*:default' list-prompt '%S%M matches%s'
+#  zstyle ':completion:*' format ' %F{yellow}-- %d --%f'
+#  zstyle ':completion:*' group-name ''
+#  zstyle ':completion:*' verbose yes
+#  zstyle ':completion::complete:*' use-cache on
+#  zstyle ':completion::complete:*' cache-path "$HOME/.zcompcache"
+#  zstyle ':completion:*' list-colors $LS_COLORS
+#  zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#) ([0-9a-z-]#)*=01;34=0=01'
+#  zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+#  zstyle ':completion:*:functions' ignored-patterns '(_*|pre(cmd|exec))'
+#  zstyle ':completion:*' rehash true
+
+
+
+# Most Themes Use This Option. from zinit
+setopt promptsubst
+
+
+
+#  setopt ALIASES                 # Expand aliases
+#  setopt ALL_EXPORT              # Export all variables to environment
+#  setopt ALWAYS_LAST_PROMPT      # Completion lists after prompt
+#  setopt ALWAYS_TO_END           # On completion go to end of word
+#  setopt APPEND_HISTORY          # History appends to existing file
+#  setopt AUTO_CD                 # Directory as command does cd
+#  setopt AUTO_CONTINUE           # Jobs are continued when disowned
+#  setopt AUTO_LIST               # List ambiguous completions
+#  setopt AUTO_MENU               # Menu complete after two tabs
+#  setopt AUTO_NAME_DIRS          # Variables always can be %~ abbrevs
+#  setopt AUTO_PARAM_KEYS         # Magic completion for parameters
+#  setopt AUTO_PARAM_SLASH        # $dirname completes with /
+#  setopt AUTO_PUSHD              # cd uses directory stack too
+#  setopt AUTO_REMOVE_SLASH       # Trailing / in completion removed
+#  setopt AUTO_RESUME             # cmd can resume job %cmd
+#  setopt BAD_PATTERN             # Errors on pattern syntax; else literal
+#  setopt BANG_HIST               # ! style history allowed
+#  setopt BARE_GLOB_QUAL          # Glob qualifiers with bare parens
+#  setopt BASH_AUTO_LIST          # List completions on second tab
+#  setopt BEEP                    # Beep on all errors
+#  setopt BG_NICE                 # Background jobs at lower priority
+#  setopt BRACE_CCL               # X{ab} expands to Xa Xb
+#  setopt BSD_ECHO                # No echo escapes unles -e given
+#  setopt CASE_GLOB               # Glob case sensitively
+#  setopt C_BASES                 # Output hexadecimal with 0x
+#  setopt CDABLE_VARS             # cd var  works if $var is directory
+#  setopt CHASE_DOTS              # Resolve .. in cd
+#  setopt CHASE_LINKS             # Resolve symbolic links in cd
+#  setopt CHECK_JOBS              # Check jobs before exiting shell
+#  setopt CLOBBER                 # Allow redirections to overwrite
+#  setopt COMPLETE_ALIASES        # Completion uses unexpanded aliases
+#  setopt COMPLETE_IN_WORD        # Completion works inside words
+#  setopt CORRECT                 # Correct spelling of commands
+#  setopt CORRECT_ALL             # Correct spelling of all arguments
+#  setopt CSH_JUNKIE_HISTORY      # Single ! for previous command
+#  setopt CSH_JUNKIE_LOOPS        # list; end for do...done
+#  setopt CSH_JUNKIE_QUOTES       # No newlines in quotes
+#  setopt CSH_NULLCMD             # Redirections with no commands fail
+#  setopt CSH_NULL_GLOB           # One glob must succeed, failures go
+#  setopt DVORAK                  # Dvorak keyboard for correction
+#  setopt EMACS                   # Same as bindkey -e
+#  setopt EQUALS                  # Expand =cmd to /path/to/cmd
+#  setopt ERR_EXIT                # Exit shell on non­zero status
+#  setopt ERR_RETURN              # Return from function instead
+#  setopt EVAL_LINE_NO            # $LINENO counts inside eval code
+#  setopt EXEC                    # Execute commands
+#  setopt EXTENDED_GLOB           # See globbing section above
+#  setopt EXTENDED_HISTORY        # Timestamps saved to history file
+#  setopt FLOW_CONTROL            # Use ^S/^Q style flow control
+#  setopt FUNCTION_ARGZER0        # $0 in function is its name
+#  setopt GLOB                    # Use globbing as described above
+#  setopt GLOBAL_EXPORT           # Exported variables not made local
+#  setopt GLOBAL_RCS              # Execute /etc/z* files
+#  setopt GLOB_ASSIGN             # var=* expands, assigns array
+#  setopt GLOB_COMPLETE           # Patterns are active in completion
+#  setopt GLOB_DOTS               # Patterns may match leading dots
+#  setopt GLOB_SUBST              # Substituted characters may glob
+#  setopt HASH_CMDS               # Store command location for speed
+#  setopt HASH_DIRS               # Store for all commands in dir
+#  setopt HASH_LIST_ALL           # Store all on first completion
+#  setopt HIST_ALLOW_CLOBBER      # On clobber error, up arrow to retry
+#  setopt HIST_BEEP               # Beep when going beyond history
+#  setopt HIST_EXPIRE_DUPS_FIRST  # Duplicate history entries lost first
+#  setopt HIST_FIND_NO_DUPS       # History search finds once only
+#  setopt HIST_IGNORE_ALL_DUPS    # Remove all earlier duplicate lines
+#  setopt HIST_IGNORE_DUPS        # Remove duplicate of previous line
+#  setopt HIST_IGNORE_SPACE       # Don’t store lines starting with space
+#  setopt HIST_NO_FUNCTIONS       # Don’t store shell functions
+#  setopt HIST_NO_STORE           # Don’t store history and fc
+#  setopt HIST_REDUCE_BLANKS      # Trim multiple insgnificant blanks
+#  setopt HIST_SAVE_NO_DUPS       # Remove duplicates when saving
+#  setopt HIST_VERIFY             # Show ! history line for editing
+#  setopt HUP                     # Send SIGHUP to proceses on exit
+#  setopt IGNORE_BRACES           # Don’t use {a,b} expansions
+#  setopt IGNORE_EOF              # Ignore ^D (stty eof char)
+#  setopt INC_APPEND_HISTORY      # Save history line by line
+#  setopt INTERACTIVE             # Shell is interactive
+#  setopt INTERACTIVE_            #
+#  setopt COMMENTS                # # on interactive line for comment
+#  setopt KSH_ARRAYS              # Indexing etc. for arrays like ksh
+#  setopt KSH_AUTOLOAD            # Function file includes function name
+#  setopt KSH_GLOB                # See globbing above
+#  setopt KSH_OPTION_PRINT        # Show all options plus on or off
+#  setopt KSH_TYPESET             # No word splitting in typeset etc.
+#  setopt LIST_AMBIGUOUS          # List completions when ambiguous
+#  setopt LIST_BEEP               # Beep on ambiguous completion
+#  setopt LIST_PACKED             # More compact completion lists
+#  setopt LIST_ROWS_FIRST         # List completions across
+#  setopt LIST_TYPES              # File types listed in completion
+#  setopt LOCAL_OPTIONS           # Options reset on function return
+#  setopt LOCAL_TRAPS             # Traps reset on function return
+#  setopt LOGIN                   # Shell is login shell
+#  setopt LONG_LIST_JOBS          # More verbose listing of jobs
+#  setopt MAGIC_EQUAL_SUBST       # Special expansion after all =
+#  setopt MAIL_WARNING            # Warn if mail file timestamp changed
+#  setopt MARK_DIRS               # Append / to globbed directories
+#  setopt MENU_COMPLETE           # Cycle through ambiguous matches
+#  setopt MONITOR                 # Shell has job control enabled
+#  setopt MULTIOS                 # Multiple redirections are special
+#  setopt NOMATCH                 # Error if glob fails to match
+#  setopt NOTIFY                  # Asynchronous job control messages
+#  setopt NULL_GLOB               # Failed globs are removed from line
+#  setopt NUMERIC_GLOB_SORT       # Numbers in globs sorted numerically
+#  setopt OCTAL_ZEROES            # Leading zeros in integers force octal
+#  setopt OVERSTRIKE              # Start line editor in overstrike mode
+#  setopt PATH_DIRS               # dir/cmd can be found in $PATH
+#  setopt POSIX_BUILTINS          # Illogical command behaviour
+#  setopt PRINT_EIGHT_BIT         # Print all 8­bit characters directly
+#  setopt PRINT_EXIT_VALUE        # Return status printed unless zero
+#  setopt PRIVILEGED              # Special behaviour on setuid/setgid
+#  setopt PROMPT_BANG             # Special treatment of ! in prompt
+#  setopt PROMPT_CR               # Prompt always at start of line
+#  setopt PROMPT_PERCENT          # % escapes expanded in prompts
+#  setopt PROMPT_SUBST            # $ expansion etc. in prompts
+#  setopt PUSHD_IGNORE_DUPS       # Don’t push dir multiply on stack
+#  setopt PUSHD_MINUS             # Reverse sense of – and + in pushd
+#  setopt PUSHD_SILENT            # No non­err messages from pushd
+#  setopt PUSHD_TO_HOME           # pushd with no argument goes to ~ Page 5 Zsh Reference Card Version 4.2 
+#  setopt RC_EXPAND_PARAM         # X$array gives Xelt1 Xelt2 etc.
+#  setopt RC_QUOTES               # '' inside single quotes gives '   ##'
+#  setopt RCS                     # Run startup files
+#  setopt REC_EXACT               # Exact completion matches are good
+#  setopt RESTRICTED              # Shell has restricted capabilities
+#  setopt RM_STAR_SILENT          # Don’t warn on rm *
+#  setopt RM_STAR_WAIT            # Wait before asking if rm * is OK
+#  setopt SHARE_HISTORY           # Save and restore history per line
+#  setopt SH_FILE_EXPANSION       # ~ etc. expansion done early
+#  setopt SH_GLOB                 # Disables non­extended zsh globs
+#  setopt SHIN_STDIN              # Shell input comes from stdin
+#  setopt SH_NULL_CMD             # Commandless redirections like sh
+#  setopt SH_OPTION_LETTERS       # Single letter options are like sh
+#  setopt SHORT_LOOPS             # for words; list works
+#  setopt SH_WORD_SPLIT           # Split non­array variables yuckily
+#  setopt SINGLE_COMMAND          # Execute one command then exit
+#  setopt SINGLE_LINE_ZLE         # Line editing on single line (bad tty)
+#  setopt SUN_KEYBOARD_HACK       # Unmatched ` at end of line ignored  ##`
+#  setopt TRANSIENT_RPROMPT       # Right prompt goes away after edit
+#  setopt TRAPS_ASYNC             # Traps may run when waiting
+#  setopt TYPESET_SILENT          # Silent on typeset foo
+#  setopt UNSET                   # Unset variables OK, treat as empty
+#  setopt VERBOSE                 # Output commands to be executed
+#  setopt VI                      # Same as bindkey -v
+#  setopt XTRACE                  # Show trace of execution with $PS4
+#  setopt ZLE                     # Line editor used to input lines

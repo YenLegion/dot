@@ -3,7 +3,7 @@ XDG_DATA_HOME=~/.local/share
 XDG_CONFIG_HOME=~/.config
 
 export GEM_HOME="$HOME/gems"
-export PATH="$HOME/gems/bin:$PATH"
+export PATH="$HOME/gems/bin:/home/yen/.local/bin:$PATH"
 
 # Load dir stack from file and continue where we left off.
 setopt autocd autopushd cdsilent chaselinks pushdignoredups pushdminus pushdsilent
