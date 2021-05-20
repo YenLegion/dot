@@ -1,6 +1,6 @@
 #autoload -U colors && colors    # Load Colors.
-unsetopt case_glob              # Use Case-Insensitve Globbing.
-setopt globdots                 # Glob Dotfiles As Well.
+# unsetopt case_glob              # Use Case-Insensitve Globbing.
+# setopt globdots                 # Glob Dotfiles As Well.
 #setopt extendedglob             # Use Extended Globbing.
 #setopt autocd                   # Automatically Change Directory If A Directory Is Entered.
 
@@ -15,7 +15,7 @@ setopt globdots                 # Glob Dotfiles As Well.
 #unsetopt mail_warning           # Don't Print A Warning Message If A Mail File Has Been Accessed.
 
 # Jobs.
-setopt long_list_jobs           # List Jobs In The Long Format By Default.
+# setopt long_list_jobs           # List Jobs In The Long Format By Default.
 #setopt auto_resume              # Attempt To Resume Existing Job Before Creating A New Process.
 #setopt notify                   # Report Status Of Background Jobs Immediately.
 #unsetopt bg_nice                # Don't Run All Background Jobs At A Lower Priority.
@@ -53,7 +53,6 @@ setopt long_list_jobs           # List Jobs In The Long Format By Default.
 #setopt hist_verify              # Do Not Execute Immediately Upon History Expansion.
 #setopt extended_history         # Show Timestamp In History.
 
-setopt extendedglob globstarshort numericglobsort
-setopt NO_autoparamslash interactivecomments rcquotes
+# setopt extendedglob globstarshort numericglobsort
+# setopt NO_autoparamslash interactivecomments rcquotes
 
-setopt NO_flowcontrol # Enable ^Q and ^S.
