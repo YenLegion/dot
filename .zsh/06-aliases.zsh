@@ -3,11 +3,11 @@
   alias l="exa -a"
   alias ls="exa -la"
   alias ll="exa -lahF@H"
-  alias cat="bat"
+  # alias cat="bat"
   alias sudo='sudo ' 						# aliases work with sudo	
   alias chmod='chmod --preserve-root'		# prevent breaking system with 'chmod 644 /*'
   alias open="xdg-open"
-  alias man="batman"
+  # alias man="batman"
   alias path='echo $PATH | tr ":" "\n"'
   alias fpath='echo $FPATH | tr ":" "\n"'
   alias aliasd='sudo micro /home/yen/oh-my-zsh/custom/aliases.zsh'
@@ -33,3 +33,9 @@
   alias fzp="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'"
   alias yay='paru'
   alias yayy='yay'
+
+ if [  -n "$(uname -a | grep Ubuntu)" ]; then
+     alias cat=batcat && alias man=man
+ else
+     alias cat=bat 
+ fi  
