@@ -15,11 +15,11 @@ znap prompt romkatv/powerlevel10k
 
 
 
-
-znap eval pyenv-init ${${:-=pyenv}:A}' init -'
-znap eval pip-completion 'pip completion --zsh'
-znap eval pipx-completion 'register-python-argcomplete pipx'
-znap eval pipenv-completion 'pipenv --completion'
+#### Need to make tests
+# znap eval pyenv-init ${${:-=pyenv}:A}' init -'
+# znap eval pip-completion 'pip completion --zsh'
+# znap eval pipx-completion 'register-python-argcomplete pipx'
+# znap eval pipenv-completion 'pipenv --completion'
 
 # Real-time auto-completion
 znap source marlonrichert/zsh-autocomplete
