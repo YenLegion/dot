@@ -109,14 +109,10 @@ bindkey '^[_' redo
 # $key table is defined by /etc/zshrc & `zsh-autocomplete`.
 
 # Alt-H: Open `man` page of current command.
-# unalias run-help
-# autoload -Uz  run-help{,-{git,ip,openssl,p4,sudo,svk,svn}}
+unalias run-help
+autoload -Uz  run-help{,-{git,ip,openssl,p4,sudo,svk,svn}}
 
 # Alt-Shift-/: Show definition of current command.
-# autoload -Uz which-command
-# zle -N which-command
-# unalias which-command 2>/dev/null
-
-## Custom
-# Control Escape
-bindkey '^H' backward-kill-word
+autoload -Uz which-command
+zle -N which-command
+unalias which-command 2>/dev/null
