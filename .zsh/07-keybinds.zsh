@@ -116,3 +116,6 @@ bindkey '^[_' redo
 # autoload -Uz which-command
 # zle -N which-command
 # unalias which-command 2>/dev/null
+
+#Control + Delete will delete subword.
+bindkey '^H' backward-kill-subword
