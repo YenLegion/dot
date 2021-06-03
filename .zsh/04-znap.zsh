@@ -34,13 +34,9 @@ znap source marlonrichert/zsh-edit
 # History editing tools
 # znap source marlonrichert/zsh-hist
 
-
-
-# Auto-generated completion colors
-# znap eval trapd00r/LS_COLORS 'dircolors -b LS_COLORS'
+znap eval trapd00r/LS_COLORS "$( whence -a dircolors gdircolors ) -b LS_COLORS"
 znap source marlonrichert/zcolors
-znap eval zcolors "zcolors ${(q)LS_COLORS}"
-
+znap eval marlonrichert/zcolors "zcolors ${(q)LS_COLORS}"
 
 eval "$(zoxide init zsh)"
 #znap eval trapd00r/LS_COLORS 'dircolors -b LS_COLORS'
