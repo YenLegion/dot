@@ -34,8 +34,8 @@
   alias yay='paru'
   alias yayy='yay'
 
- # if [  -n "$(uname -a | grep Ubuntu)" ]; then
-if grep -q Ubuntu /etc/os-release; then
+  if [  -n "$(uname -a | grep Ubuntu)" ]; then
+#if grep -q Ubuntu /etc/os-release; then
      alias cat=batcat && alias man=man
 else
      alias cat=bat

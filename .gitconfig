@@ -1,44 +1,46 @@
 [user]
 	email = petermacchapman@gmail.com
 	name = yenlegion
-[credential]
-	helper = /mnt/c/Program\\ Files/Git/mingw64/libexec/git-core/git-credential-manager-core.exe
 [core]
 	pager = diff-so-fancy | less --tabs=4 -RFX
 [color "decorate"]
 	HEAD = 14 normal italic
-	remotebranch = 13 normal
-	grafted = 1 normal italic
-	tag = 3 normal bold
+	remotebranch = 197 normal
+	grafted = 232 normal bold
+	tag = 113 normal bold
 	stash = 8 normal
 	branch = 14 normal
 [color "diff"]
 	whitespace = normal
-	commit = 3 normal
-	func = 10 normal
+	commit = 126 normal
+	func = 208 normal bold
+	meta = 11
+	frag = magenta bold
+	old = red bold
+	new = green bold
 [color "grep"]
-	filename = 7 normal
-	function = 10 normal
+	filename = normal
+	function = 208 normal bold
 	column = 8 normal
 	linenumber = 8 normal
 [color "interactive"]
 	header = normal
 	help = 8 normal
-	error = 1 normal italic
+	error = 232 normal bold
 [color "status"]
 	changed = 3 normal
 	unmerged = 1 normal
-	nobranch = 1 normal italic
+	nobranch = 232 normal bold
 	updated = 2 normal
 	localbranch = 14 normal
 	added = 2 normal
 	untracked = normal dim
 	header = normal
-	remotebranch = 13 normal
+	remotebranch = 197 normal
 	branch = 14 normal
 [color "branch"]
-	remote = 13 normal
-	upstream = 13 normal
+	remote = 197 normal
+	upstream = 197 normal
 	plain = 14 normal
 	current = 14 normal reverse
 	local = 14 normal
@@ -49,3 +51,12 @@
 	warning = 3 normal
 [init]
 	defaultBranch = main
+[interactive]
+	diffFilter = diff-so-fancy --patch
+[color]
+	ui = true
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
