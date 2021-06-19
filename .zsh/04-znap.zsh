@@ -28,13 +28,13 @@ znap source marlonrichert/zsh-autocomplete
 znap source ohmyzsh/ohmyzsh plugins/globalias
 
 # Better line editing tools
-WORDCHARS='*?~\ '
+zstyle ':edit:*' word-chars '*?~\'
 znap source marlonrichert/zsh-edit
 
 # History editing tools
 # znap source marlonrichert/zsh-hist
 
-znap eval trapd00r/LS_COLORS "$( whence -a dircolors gdircolors ) -b LS_COLORS"
+#znap eval trapd00r/LS_COLORS "$( whence -a dircolors gdircolors ) -b LS_COLORS"
 znap source marlonrichert/zcolors
 znap eval marlonrichert/zcolors "zcolors ${(q)LS_COLORS}"
 
@@ -44,9 +44,9 @@ eval "$(zoxide init zsh)"
 
 # In-line suggestions
 ZSH_AUTOSUGGEST_ACCEPT_WIDGETS=()
-ZSH_AUTOSUGGEST_PARTIAL_ACCEPT_WIDGETS=( forward-char forward-word end-of-line )
+ZSH_AUTOSUGGEST_PARTIAL_ACCEPT_WIDGETS+=( forward-char forward-word end-of-line )
 ZSH_AUTOSUGGEST_STRATEGY=( history )
-ZSH_AUTOSUGGEST_HISTORY_IGNORE=$'*\n*'
+ZSH_AUTOSUGGEST_HISTORY_IGNORE=$'(*\n*|?(#c80,))'
 znap source zsh-users/zsh-autosuggestions
 
 # Command-line syntax highlighting
