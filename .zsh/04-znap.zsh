@@ -26,7 +26,7 @@ znap source marlonrichert/zsh-autocomplete
 
 # Automatic alias expansion
 znap source ohmyzsh/ohmyzsh plugins/globalias
-
+znap source ohmyzsh/ohmyzsh plugins/zsh-navigation-tools
 # Better line editing tools
 zstyle ':edit:*' word-chars '*?~\'
 znap source marlonrichert/zsh-edit
