@@ -14,7 +14,9 @@ setopt autocd autopushd cdsilent chaselinks pushdignoredups pushdminus pushdsile
 #}
 
 export LANG='en_US.UTF-8'
+if [[ ! -a /usr/bin/micro ]]; then
 export EDITOR=/usr/bin/micro
+fi
 
 typeset -U PATH path FPATH fpath MANPATH manpath # Remove duplicates.
 
