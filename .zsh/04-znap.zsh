@@ -1,15 +1,15 @@
 # Source Znap Plugin Manager
+
 source ~/.config/zsh/zsh-snap/znap.zsh
 
 zstyle ':autocomplete:tab:*' widget-style menu-select
 zstyle ':autocomplete:*' min-input 1
-
+znap source romkatv/powerlevel10k
 
 
 
 
 # Znap
-znap prompt romkatv/powerlevel10k
 
 
 
@@ -31,6 +31,7 @@ znap source ohmyzsh/ohmyzsh plugins/zsh-navigation-tools
 zstyle ':edit:*' word-chars '*?~\'
 znap source marlonrichert/zsh-edit
 
+
 # History editing tools
 # znap source marlonrichert/zsh-hist
 
@@ -38,7 +39,7 @@ znap source marlonrichert/zsh-edit
 znap source marlonrichert/zcolors
 znap eval marlonrichert/zcolors "zcolors ${(q)LS_COLORS}"
 
-eval "$(zoxide init zsh)"
+#eval "$(zoxide init zsh)"
 #znap eval trapd00r/LS_COLORS 'dircolors -b LS_COLORS'
 # zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 

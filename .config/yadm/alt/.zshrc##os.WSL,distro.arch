@@ -1,2 +1,8 @@
+#source ~/.config/zsh/zsh-snap/znap.zsh
+
+
 #█▓▒░ load configs
 for config (~/.zsh/*.zsh) source $config
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

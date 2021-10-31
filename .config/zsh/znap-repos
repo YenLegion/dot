@@ -1,7 +1,7 @@
 marlonrichert/zcolors
 marlonrichert/zsh-autocomplete
 marlonrichert/zsh-edit
-MenkeTechnologies/zsh-more-completions
+#MenkeTechnologies/zsh-more-completions
 ohmyzsh/ohmyzsh
 romkatv/powerlevel10k
 sorin-ionescu/prezto

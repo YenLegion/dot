@@ -5,45 +5,60 @@
 	pager = diff-so-fancy | less --tabs=4 -RFX
 [color "decorate"]
 	HEAD = 14 normal italic
-	remotebranch = 197 normal
-	grafted = 232 normal bold
-	tag = 113 normal bold
+	remotebranch = 13 normal
+	grafted = 1 normal italic
+	tag = 3 normal
 	stash = 8 normal
 	branch = 14 normal
 [color "diff"]
-	whitespace = normal
-	commit = 126 normal
-	func = 208 normal bold
-	meta = 11
-	frag = magenta bold
-	old = red bold
-	new = green bold
+	whitespace = normal reverse
+	commit = 3 normal
+	func = 8 normal ul
+	meta = 8 normal
+	frag = 8 normal ul
+	old = 9 normal dim
+	new = 10 normal
+	newMoved = 14 normal
+	oldMovedAlternativeDimmed = 4 normal dim
+	oldMovedAlternative = 12 normal dim
+	contextBold = normal bold
+	newBold = 10 normal bold
+	context = normal
+	oldMoved = 14 normal dim
+	oldBold = 9 normal dim bold
+	newMovedDimmed = 6 normal
+	newDimmed = 2 normal
+	newMovedAlternative = 12 normal
+	newMovedAlternativeDimmed = 4 normal
+	oldMovedDimmed = 6 normal dim
+	oldDimmed = 1 normal dim
 [color "grep"]
-	filename = normal
-	function = 208 normal bold
+	filename = 7 normal
+	function = 10 normal
 	column = 8 normal
 	linenumber = 8 normal
 [color "interactive"]
-	header = normal
+	header = 8 normal bold
 	help = 8 normal
-	error = 232 normal bold
+	error = 1 normal italic
+	prompt = 15 4
 [color "status"]
-	changed = 3 normal
-	unmerged = 1 normal
-	nobranch = 232 normal bold
-	updated = 2 normal
+	changed = 11 normal
+	unmerged = 9 normal
+	nobranch = 1 normal italic
+	updated = 10 normal
 	localbranch = 14 normal
-	added = 2 normal
+	added = 10 normal
 	untracked = normal dim
 	header = normal
-	remotebranch = 197 normal
+	remotebranch = 13 normal
 	branch = 14 normal
 [color "branch"]
-	remote = 197 normal
-	upstream = 197 normal
-	plain = 14 normal
-	current = 14 normal reverse
-	local = 14 normal
+	remote = 13 normal dim
+	upstream = 13 normal
+	plain = 14 normal dim
+	current = 14 normal
+	local = 14 normal dim
 [color "remote"]
 	success = 2 normal
 	error = 1 normal
@@ -60,3 +75,20 @@
 	oldHighlight = red bold 52
 	newNormal = green bold
 	newHighlight = green bold 22
+[diff]
+	colorMoved = zebra
+[maintenance]
+	repo = /home/yen/.config/zsh/forgit
+	repo = /home/yen/.config/zsh/LS_COLORS
+	repo = /home/yen/.config/zsh/prezto
+	repo = /home/yen/.config/zsh/tmux
+	repo = /home/yen/.config/zsh/zcolors
+	repo = /home/yen/.config/zsh/zsh-completions
+	repo = /home/yen/.config/zsh/zsh-edit
+	repo = /home/yen/.config/zsh/zsh-more-completions
+	repo = /home/yen/.config/zsh/zsh-snap
+	repo = /home/yen/.config/zsh/zsh-syntax-highlighting
+	repo = /home/yen/.config/zsh/ohmyzsh
+	repo = /home/yen/.config/zsh/powerlevel10k
+	repo = /home/yen/.config/zsh/zsh-autocomplete
+	repo = /home/yen/.config/zsh/zsh-autosuggestions
