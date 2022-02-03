@@ -1,19 +1,15 @@
+# Download Znap, if it's not there yet.
+[[ -f ~/.config/zsh/zsh-snap/znap.zsh ]] ||
+    git clone --depth 1 -- \
+        https://github.com/marlonrichert/zsh-snap.git ~/.config/zsh/zsh-snap
 # Source Znap Plugin Manager
 source ~/.config/zsh/zsh-snap/znap.zsh
 
 zstyle ':autocomplete:tab:*' widget-style menu-select
 zstyle ':autocomplete:*' min-input 1
 
-
-
-
-
 # Znap
 znap prompt romkatv/powerlevel10k
-
-
-
-
 
 #### Need to make tests
 # znap eval pyenv-init ${${:-=pyenv}:A}' init -'
@@ -38,7 +34,7 @@ znap source marlonrichert/zsh-edit
 znap source marlonrichert/zcolors
 znap eval marlonrichert/zcolors "zcolors ${(q)LS_COLORS}"
 
-eval "$(zoxide init zsh)"
+#eval "$(zoxide init zsh)"
 #znap eval trapd00r/LS_COLORS 'dircolors -b LS_COLORS'
 # zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 
