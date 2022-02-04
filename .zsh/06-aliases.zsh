@@ -33,7 +33,8 @@
   alias fzp="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'"
   alias yay='paru'
   alias yayy='yay'
-
+  alias tree='exa -la --tree'
+	
   if [  -n "$(uname -a | grep Ubuntu)" ]; then
 #if grep -q Ubuntu /etc/os-release; then
      alias cat=batcat && alias man=man
