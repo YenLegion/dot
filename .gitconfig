@@ -1,8 +1,8 @@
 [user]
 	email = petermacchapman@gmail.com
 	name = yenlegion
-[core]
-	pager = diff-so-fancy | less --tabs=4 -RFX
+#[core]
+#	pager = diff-so-fancy | less --tabs=4 -RFX
 [color "decorate"]
 	HEAD = 14 normal italic
 	remotebranch = 197 normal
@@ -60,3 +60,5 @@
 	oldHighlight = red bold 52
 	newNormal = green bold
 	newHighlight = green bold 22
+[include]
+    path = .gitconfig.local
