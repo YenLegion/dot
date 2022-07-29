@@ -1,49 +1,62 @@
 [user]
 	email = petermacchapman@gmail.com
 	name = yenlegion
-#[core]
-#	pager = diff-so-fancy | less --tabs=4 -RFX
 [color "decorate"]
-	HEAD = 14 normal italic
-	remotebranch = 197 normal
-	grafted = 232 normal bold
-	tag = 113 normal bold
-	stash = 8 normal
-	branch = 14 normal
+	HEAD = normal dim
+	remotebranch = normal
+	grafted = 1 normal italic
+	tag = 3 normal
+	stash = normal
+	branch = normal
 [color "diff"]
-	whitespace = normal
-	commit = 126 normal
-	func = 208 normal bold
+	whitespace = red reverse
+	commit = yellow bold
+	func = 146 bold
 	meta = 11
 	frag = magenta bold
 	old = red bold
 	new = green bold
+	newMoved = 14 normal
+	oldMovedAlternativeDimmed = 4 normal dim
+	oldMovedAlternative = 12 normal dim
+	contextBold = normal bold
+	newBold = 10 normal bold
+	context = normal
+	oldMoved = 14 normal dim
+	oldBold = 9 normal dim bold
+	newMovedDimmed = 6 normal
+	newDimmed = 2 normal
+	newMovedAlternative = 12 normal
+	newMovedAlternativeDimmed = 4 normal
+	oldMovedDimmed = 6 normal dim
+	oldDimmed = 1 normal dim
 [color "grep"]
 	filename = normal
 	function = 208 normal bold
 	column = 8 normal
 	linenumber = 8 normal
 [color "interactive"]
-	header = normal
-	help = 8 normal
-	error = 232 normal bold
+	header = normal bold
+	help = normal
+	error = 1 normal italic
+	prompt = 15 4
 [color "status"]
-	changed = 3 normal
-	unmerged = 1 normal
-	nobranch = 232 normal bold
-	updated = 2 normal
-	localbranch = 14 normal
-	added = 2 normal
+	changed = 11 normal
+	unmerged = 9 normal
+	nobranch = 1 normal italic
+	updated = 10 normal
+	localbranch = normal
+	added = 10 normal
 	untracked = normal dim
 	header = normal
-	remotebranch = 197 normal
-	branch = 14 normal
+	remotebranch = normal
+	branch = normal
 [color "branch"]
-	remote = 197 normal
-	upstream = 197 normal
-	plain = 14 normal
-	current = 14 normal reverse
-	local = 14 normal
+	remote = normal dim
+	upstream = normal
+	plain = normal dim
+	current = normal
+	local = normal dim
 [color "remote"]
 	success = 2 normal
 	error = 1 normal
@@ -62,3 +75,13 @@
 	newHighlight = green bold 22
 [include]
     path = .gitconfig.local
+[diff]
+	colorMoved = zebra
+[core]
+	pager = diff-so-fancy | less --tabs=4 -RFX
+[credential]
+	credentialStore = gpg
+	helper = 
+	helper = /usr/local/share/gcm-core/git-credential-manager-core
+[credential "https://dev.azure.com"]
+	useHttpPath = true
